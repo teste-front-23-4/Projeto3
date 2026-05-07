@@ -1,5 +1,5 @@
 window.onload = function(){
-    const intro = document.getElementById("inicio");
+    const intro=document.getElementById("inicio");
 
     setTimeout(()=>{
         intro.classList.add("efeito-out")
@@ -9,10 +9,23 @@ window.onload = function(){
             content.classList.add("efeito-in")
         },1000)
     },3000)
+
 }
 
+// MENU HAMBURGUER
 
-function troca(cor){
+document.addEventListener('DOMContentLoaded',()=>{
+    const menuIcone= document.getElementById("menu-icone");
+    const navMenu = document.querySelector("nav");
+    if(menuIcone && navMenu){
+        menuIcone.onclick=()=>{
+            navMenu.classList.toggle("active");
+            menuIcone.classList.toggle("open");     
+        }
+    }
+})
+
+
+function trocar(cor){
     document.body.style.background=cor;
 }
-
